@@ -37,7 +37,9 @@ init_rAPI <- function(baseUrl) {
       }
       parameterName = parameterNames[i]
       parameterValue = get(parameterName, parameters)
-      parametersUrlPart <- paste(parametersUrlPart, sep, parameterName, "=", parameterValue, sep="")
+      if (!is.null(parameterValue) && !is.na(parameterValue)) {}
+        parametersUrlPart <- paste(parametersUrlPart, sep, parameterName, "=", parameterValue, sep="")
+      }
     }
     return (parametersUrlPart)
   }
